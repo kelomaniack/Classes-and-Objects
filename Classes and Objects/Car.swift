@@ -20,8 +20,16 @@ class Car {
     var numberOfSeats: Int = 5
     var typeOfCar: CarType = .Coupe
     
-    init(customerChosenColor: String) {
+    init() {
+    }
+    
+    convenience init(customerChosenColor: String) {
+        self.init()
         color = customerChosenColor
+    }
+    
+    func drive() {
+        print("Car is moving")
     }
 }
 
